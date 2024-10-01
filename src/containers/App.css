@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+.allura-regular {
+  font-family: 'Allura', cursive;
+  font-weight: bolder;
+  font-size: 48px;
+  color: whitesmoke;
+}
