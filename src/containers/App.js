@@ -4,7 +4,7 @@ import {robots} from '../components/robots';
 import SearchBox from '../components/SearchBox';
 import './App.css';
 import Scroll from '../components/Scroll';
-
+import ErrorBoundary from '../components/ErrorBoundary';
 class App extends Component   {
     constructor() {
         super()
@@ -37,7 +37,9 @@ class App extends Component   {
                     <h1 className='allura-regular' >ROBO FRIENDS</h1>
                     <SearchBox searchChange={this.onSearchChange}/>
                     <Scroll>
-                    <CardList robots={filteredrobots} />
+                    <ErrorBoundary>
+                        <CardList robots={filteredrobots} />
+                    </ErrorBoundary>
                     </Scroll>
                 </div>
         );
